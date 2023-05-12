@@ -1,21 +1,14 @@
-const http = require('http');
+// npm - global command, comes with node
+// npm --version
 
-// server with 'return' setup, can do with 'else if' statement to (inside comment at line 9)
-const server = http.createServer((req, res) => {
-    if (req.url === '/') {
-        res.end('Welcome to our homepage !');
-        return;
-    } 
-    /* else */  if (req.url === '/about') {
-        res.end('Here is our short history');
-        return;
-    }
-    res.end(
-        `<div>Oops!</div>
-        <p>We can't seem to find the page you are looking for...</p>
-        <a href='/'>Back to homepage</a>`
+// local dependency - use it only in this particular project
+// npm i <packageName>
 
-    )
-});
+// global dependency - use it in any project
+// npm install -g <packageName>
+// sudo npm install -g <packageName> (mac)
 
-server.listen(5000);
+// package.json - manifest file (stores important info about project/package)
+// manual approach (create package.json in the root, create properties etc)
+// npm init (step by step, press enter to skip)
+// npm init -y (everything default)
